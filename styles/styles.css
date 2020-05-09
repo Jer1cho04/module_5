@@ -79,7 +79,8 @@ img {
 .slider-background img {
   min-width: 1110px;
   width: 100%;
-  height: 100%;
+  height: auto;
+  display: block;
 }
 
 .slider-background::before {
@@ -92,17 +93,8 @@ img {
   background-color: rgba(0, 0, 2, 0.52);
 }
 
-.slider-content {
-  position: absolute;
-  margin: 0 auto;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-}
-
 .slider-arrows {
-  width: 100%;
+  max-width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -138,24 +130,20 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
-  /* width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   font-family: "Roboto";
   color: #ffffff;
   text-transform: uppercase;
 }
 
 .slider-text-header {
+  display: inline-block;
   font-size: 60px;
   line-height: 1.367;
   font-weight: 900;
 }
 
 .slider-text-content {
+  display: inline-block;
   font-size: 24px;
   line-height: 2.25;
   font-weight: 300;
