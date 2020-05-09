@@ -6,7 +6,7 @@
 
 .container {
   margin: 0 auto;
-  max-width: 1110px;
+  width: 1110px;
 }
 
 img {
@@ -92,8 +92,16 @@ img {
   background-color: rgba(0, 0, 2, 0.52);
 }
 
+.slider-content {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .slider-arrows {
-  z-index: 10;
   width: 100%;
   position: absolute;
   top: 50%;
@@ -126,11 +134,16 @@ img {
 }
 
 .slider-text {
-  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-33%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  /* width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
   font-family: "Roboto";
   color: #ffffff;
   text-transform: uppercase;
