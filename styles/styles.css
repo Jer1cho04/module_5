@@ -10,6 +10,8 @@
 }
 
 img {
+  width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -72,15 +74,18 @@ img {
   margin-right: 34px;
 }
 
+main {
+  padding-bottom: 100px;
+  background-color: rgb(233, 240, 253);
+}
+
 .slider {
+  margin-bottom: 96px;
   position: relative;
 }
 
 .slider-background img {
   min-width: 1110px;
-  width: 100%;
-  height: auto;
-  display: block;
 }
 
 .slider-background::before {
@@ -116,12 +121,12 @@ img {
 }
 
 .prev {
-  background-image: url(../images/prev.png);
+  background-image: url(../images/slider/prev.png);
   float: left;
 }
 
 .next {
-  background-image: url(../images/next.png);
+  background-image: url(../images/slider/next.png);
   float: right;
 }
 
@@ -136,15 +141,191 @@ img {
 }
 
 .slider-text-header {
-  display: inline-block;
   font-size: 60px;
   line-height: 1.367;
   font-weight: 900;
+  text-align: left;
+  white-space: nowrap;
 }
 
 .slider-text-content {
-  display: inline-block;
   font-size: 24px;
   line-height: 2.25;
   font-weight: 300;
+  text-align: left;
+}
+
+.section-name {
+  text-align: center;
+  font-size: 48px;
+  font-family: "Roboto";
+  color: rgb(81, 81, 81);
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.section-name::after {
+  content: "";
+  display: block;
+  background-color: rgb(26, 188, 156);
+  width: 164px;
+  height: 7px;
+  margin: 28px auto 90px;
+}
+
+.product-card {
+  position: relative;
+  width: 255px;
+  float: left;
+}
+
+.product-card:not(:last-of-type) {
+  margin-right: 30px;
+}
+
+.product-card-image {
+  background-color: #e9f0fd;
+}
+
+.product-card-info {
+  background-color: #323232;
+}
+
+.product-name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 180px;
+  white-space: nowrap;
+  padding: 7px 7px 7px 7px;
+  float: left;
+  font-size: 18px;
+  font-family: "Roboto";
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: 1.778;
+  font-weight: 900;
+}
+
+.product-price {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 7px 7px 7px 7px;
+  float: right;
+  font-size: 18px;
+  font-family: "Roboto";
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: 1.778;
+  font-weight: 900;
+}
+
+.product-price::before {
+  content: "$";
+}
+
+.product-card:hover .product-card-info {
+  background-color: #1abc9c;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 255px;
+  height: 282px;
+  border-width: 10px;
+  border-color: rgba(255, 255, 255, 0.55);
+  border-style: solid;
+  background-color: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+}
+
+.product-card:hover .overlay {
+  opacity: 1;
+}
+
+.product-overlay-button {
+  width: 50px;
+  height: 50px;
+  border-width: 1px;
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  margin-bottom: 8px;
+}
+
+.like {
+  background-image: url(../images/overlay-button/like.png);
+}
+
+.compare {
+  background-image: url(../images/overlay-button/compare.png);
+}
+
+.favourites {
+  background-image: url(../images/overlay-button/favourites.png);
+}
+
+.cart-button {
+  background-image: url(../images/overlay-button/cart.png);
+  background-position-x: 12px;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  border-width: 1px;
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+  background-color: rgb(50, 50, 50);
+  width: 166px;
+  height: 50px;
+  padding-left: 12px;
+}
+
+.cart-button {
+  font-size: 14px;
+  font-family: "OpenSans";
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: 2.286;
+  text-align: right;
+  padding-right: 17px;
+}
+
+.button-box button:hover,
+.button-box button:focus {
+  background-color: rgb(26, 188, 156);
+  border: none;
+}
+
+.button-box button {
+  float: left;
+}
+
+.button-box button:not(:nth-of-type(3)) {
+  margin-right: 8px;
+}
+
+.button-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+footer {
+  background-color: rgb(50, 50, 50);
+}
+
+footer p {
+  font-size: 16px;
+  font-family: "Myriad Pro";
+  color: rgb(254, 254, 254);
+  line-height: 1.75;
+  text-align: center;
+  padding: 36px 0 32px 0;
+}
+
+footer a {
+  color: #46bfa9;
 }
